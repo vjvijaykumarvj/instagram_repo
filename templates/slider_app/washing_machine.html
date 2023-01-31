@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block title_content %}
+<title>Washnine Machine</title>
+{% endblock %}
+
+{% block style_content %}
+<style>
+body {background-color: powderblue;}
+h1 {text-align: center;}
+h3 {text-align: center;}
+h4 {text-align: center;}
+h2 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<h1>Washning Machine</h1>
+<p> Ends in 4 days
+Inclusive of all taxes
+Coupon:
+
+ Apply ₹5000 coupon Terms
+EMI starts at ₹3,583. No Cost EMI available EMI options  </p>
+<form method="POST" enctype="multipart/form-data">
+ {% csrf_token %}
+{% include 'washing.html' %}
+ <button type="submit" style="color:red"><a href="/washing_payment/">Order Item</a></button>
+</form>
+
+<p> Electrolux 9kg/6kg 5 Star 40°C Vapour Wash</p>
+<p>Wash to Dry EcoInverter Fully Automatic Front Load Washer Dryer</p>
+<p>Scandinavian Design for Sustainable Clothing</p>
+<p>White, UltimateCare 500, EWW9024P5WB </p>
+<p> Visit the ELECTROLUX Store </p>
+<p>Size: 9kg/6kg
+ 9kg/6kg
+ ₹74,990.00
+ 8kg/5kg
+ ₹60,990.00</p>
+<br><br>
+<h4 style="color:purple">Description</h4>
+<br>
+<p> Capacity	8 Kilograms</p>
+<p>Colour	White</p>
+<p>Brand	ELECTROLUX</p>
+<p>Cycle Options	Delay Start</p>
+<p>Product Dimensions	57.5D x 60W x 85H Centimeters</p>
+<p>Voltage	230 Volts</p>
+<p>Item Weight	63000 Grams</p>
+<p>Included Components	Washing Machine, Hose Drain, Hose Inlet, User Manual, Drain hose hanger, Cap hole, Pre-installed Shutter (Rat Mesh)Washing Machine, Hose Drain, Hose Inlet, User Manual, Drain hose hanger, Cap hole, Pre-installed Shutter (Rat Mesh) See more</p>
+<p>Wattage	2000 Watts</p>
+
+<br><br>
+<h3> About this item </h3>
+
+<p> Warranty: 2 Years Standard Warranty; 10 Years Warranty on Inverter Motor </p>
+<p> HYGIENIC CARE: Electrolux washing machine not only cleans your clothes but also finishes the wash cycle with a soft spray of vapour at 40°C that removes up to 99.9% of allergens and germs. HygienicCare function produces vapour at just 40°C, meaning it is gentler on your fabrics so they last longer, whilst also saving energy </p>
+<p> ECOINVERTER MOTOR FUNCTION: Complete your laundry without disturbing anyone and at any time. The Ecolnverter Motor also reduces vibration to reduce the noise and also saves up to 50% lower energy consumption as compared to traditional washing machines. </p>
+<p> QUICK 15 WASHING CYCLES: This 15-minutes washing cycle is suitable for a small number of clothes. You can also adapt a regular full load, set to the Full Wash 60 cycle-an ideal one-hour program. </p>
+<p> VARIABLE TEMPERATURE FEATURE- Electrolux UltraCare 300 washing machine gives you the flexibility to adapt the cycle temperature depending on the type of fabric. </p>
+{% endblock %}

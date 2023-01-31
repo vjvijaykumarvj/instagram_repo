@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block style_content %}
+<style>
+body {background-color: powderblue;}
+h1   {color: green;}
+
+h1 {text-align: center;}
+h3 {text-align: center;}
+h2 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+{% endblock %}
+{% block page_content  %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+<!--    <label for="name"><b>Name</b></label>-->
+<!--    <input type="text" placeholder="Enter Name" name="name" id="name" required>-->
+
+<!--    <label for="phone"><b>phonenumber</b></label>-->
+<!--    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required>-->
+
+<!--    <label for="email"><b>Email</b></label>-->
+<!--    <input type="email" placeholder="Enter Email" name="email" id="email" required>-->
+
+<!--     <label for="SelectCourse"><b>Select Course</b></label>-->
+<!--    <select name="selectcourse">-->
+<!--      <option value="<-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Select Course-&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;">Select Course</option>-->
+<!--      <option value="Python">Python</option>-->
+<!--      <option value="Python">Java</option>-->
+<!--      <option value="Python">Django</option>-->
+<!--      <option value="Python">Selenium</option>-->
+<!--      <option value="Python">C++</option>-->
+<!--    </select>-->
+
+<!--    <label for="Select Trining Type"><b>Select Trining Type</b></label>-->
+<!--    <select name="selectcourse">-->
+<!--      <option value="<-&#45;&#45;&#45;&#45;select type-&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;">Select Course Type</option>-->
+<!--      <option value="Online">Online</option>-->
+<!--      <option value="Offline">Offline</option>-->
+
+<!--    </select>-->
+<!--    <hr>-->
+
+    {{blog.as_p}}
+<div>
+    <button type="submit" class="registerbtn">Book and Free Demo Class</button>
+  </div>
+  </div>
+    <br>
+  <hr>
+<h3 style="color:Fuchsia">Working Hours</h3>
+  <p style="color:red">Monday - Saturday : 8:00-19:30 Hrs
+(Phone until 20:30 Hrs)
+Sunday - 8:00 -14:00</p>
+<hr>
+  <h3 style="color:Purple">We are here</h3>
+  <p style="color:Maroon"> 100 FT Ring Road, BTM 1st Stage, Bangalore-29</p>
+<p style="color:Maroon">Phone: 080-42191321<p>
+  <p style="color:Maroon">Mob : +91 8764535267</p>
+<p style="color:Maroon">Email: vijay@vj.co.in </p>
+<hr>
+</form>
+
+{% endblock %}

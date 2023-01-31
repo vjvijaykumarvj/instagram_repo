@@ -1,0 +1,44 @@
+{% load static %}
+{% include 'sudo.html' %}
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="row">
+  <div class="column">
+    <a href="#"><img src="{% static 'images/Bed_image.jfif' %}" alt="Snow" style="width:100%">
+    <p>DoubleCot Bed</p></a>
+  </div>
+  <div class="column">
+    <a href="#"><img src="{% static 'images/mobile_image.jfif' %}" alt="Forest" style="width:100%">
+    <p>Poco X3 Pro Mobile</p></a>
+  </div>
+  <div class="column">
+    <a href="/profile/"><img src="{% static 'images/laptop_image.jpg' %}" alt="Mountains" style="width:100%">
+      <p>Dell Laptop</p></a>
+  </div>
+</div>
+</body>
+</html>

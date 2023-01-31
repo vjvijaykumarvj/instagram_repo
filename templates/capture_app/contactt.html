@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title_content %}
+<title>Form Capture</title>
+{% endblock %}
+
+{% block page_content %}
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div class="g-recaptcha" data-sitekey="6LcaxHwiAAAAAKrqTPN8rJJWH_HKQtk55JWs1Tr6"></div>
+  <button type="submit">Submit</button>
+</form>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+{% endblock %}
